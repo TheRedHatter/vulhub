@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Required for accurate analysis and PR decoration
+          fetch-depth: 0
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -28,4 +28,8 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # for PR info
+        with:
+          args: >
+            -Dsonar.projectKey=TheRedHatter_vulhub_95caae11-a3b9-4584-a3c8-b1605790f94a
+            -Dsonar.projectName=vulhub
+            -Dsonar.sources=.
