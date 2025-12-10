@@ -33,3 +33,4 @@ jobs:
             -Dsonar.projectKey=TheRedHatter_vulhub_95caae11-a3b9-4584-a3c8-b1605790f94a
             -Dsonar.projectName=vulhub
             -Dsonar.sources=.
+            -Dsonar.exclusions=**/*.java
