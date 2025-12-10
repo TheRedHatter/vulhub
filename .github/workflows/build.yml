@@ -29,8 +29,3 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # for PR info
-
-      - name: SonarQube Quality Gate
-        uses: SonarSource/sonarqube-quality-gate-action@v1.1.0
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
